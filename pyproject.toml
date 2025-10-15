@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "savtools-py"
+version = "0.1.0"
+description = "Custom functions I made based on existing libraries, focused on small quality-of-life improvements and missing utilities I wish the original projects had."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Mohammad Savarmand" }
+]
+dependencies = [
+    # If you're not the author, expect more dependencies
+    "polars>=1.13.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/mohammadsav/savtools-py"
+Issues = "https://github.com/mohammadsav/savtools-py/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/savtools"]
